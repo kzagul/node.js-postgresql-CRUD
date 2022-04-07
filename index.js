@@ -20,6 +20,7 @@ const contactsRouter = require('./db/routes/contacts.routes')
 const trainerRouter = require('./db/routes/trainer.routes')
 const sportObjectRouter = require('./db/routes/sportobject.routes')
 const sportInstitutionRouter = require('./db/routes/sportinstitution.routes')
+const userRouter = require('./db/routes/user.routes')
 
 //url links
 app.use(cors())
@@ -31,6 +32,7 @@ app.use('/api', contactsRouter)
 app.use('/api', trainerRouter)
 app.use('/api', sportObjectRouter)
 app.use('/api', sportInstitutionRouter)
+app.use('/api', userRouter)
 
 
 
