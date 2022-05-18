@@ -2,6 +2,8 @@
 const express = require('express')
 const { Pool } = require('pg')
 
+require('dotenv').config()
+
 //cors
 const cors = require('cors')
 
@@ -9,7 +11,7 @@ const cors = require('cors')
 const app = express()
 
 //port for localhost
-const PORT = 3002
+const PORT = process.env.DB_PORT || 3002
 
 const db = require('./db/DBconnection')
 
