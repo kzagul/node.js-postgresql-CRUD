@@ -11,7 +11,8 @@ const cors = require('cors')
 const app = express()
 
 //port for localhost
-const PORT = process.env.DB_PORT || 3002
+const PORT =  3004
+// process.env.DB_PORT ||
 
 const db = require('./db/DBconnection')
 
