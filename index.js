@@ -40,8 +40,8 @@ app.get('/', async (req, res) => {
     res.send("Heoo")
 })
 
-// const PORT = process.env.DB_PORT || 3004
-const PORT =  3030
+const PORT = process.env.DB_PORT || 3004
+// const PORT =  3030
 
 //checking the server's work
 app.listen(PORT, () => {
