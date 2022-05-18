@@ -9,10 +9,9 @@ const cors = require('cors')
 
 //app object
 const app = express()
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors())
-
 
 //routes to controllers with API
 const directorRouter = require('./db/routes/director.routes')
@@ -34,10 +33,10 @@ app.use('/api', userRouter)
 
 
 // const PORT = appConfig.Port || 3004
-const PORT = process.env.PORT || 3004
+const port = process.env.PORT || 3004
 // const PORT =  3030
 
 //checking the server's work
-app.listen(PORT, () => {
-    console.log(`listen to port ${PORT}`)
+app.listen(port, () => {
+    console.log(`listen to port ${port}`)
 })
