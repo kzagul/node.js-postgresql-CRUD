@@ -42,6 +42,7 @@ const PORT = process.env.DB_PORT || 3004
 // const PORT =  3030
 
 //checking the server's work
-app.listen(PORT, "0.0.0.0", () => {
+
+app.listen(PORT, () => {
     console.log(`listen to port ${PORT}`)
 })
