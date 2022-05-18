@@ -33,16 +33,11 @@ app.use('/api', userRouter)
 
 
 
-app.get('/', async (req, res) => {
-    res.send("Heoo")
-})
-
 // const PORT = appConfig.Port || 3004
 const PORT = process.env.DB_PORT || 3004
 // const PORT =  3030
 
 //checking the server's work
-
 app.listen(PORT, () => {
     console.log(`listen to port ${PORT}`)
 })
