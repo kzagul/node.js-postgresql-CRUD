@@ -1,6 +1,7 @@
 //packages
 const express = require('express')
 const { Pool } = require('pg')
+const appConfig =  require('./db/AppConfig.js')
 
 require('dotenv').config()
 
@@ -24,6 +25,7 @@ const userRouter = require('./db/routes/user.routes')
 
 //url links
 app.use(cors())
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
 app.use('/api', directorRouter)
@@ -40,7 +42,7 @@ app.get('/', async (req, res) => {
     res.send("Heoo")
 })
 
-const PORT = process.env.DB_PORT || 3004
+const PORT = appConfig.Port || 3004
 // const PORT =  3030
 
 //checking the server's work
