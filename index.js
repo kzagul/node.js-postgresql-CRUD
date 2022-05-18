@@ -10,9 +10,6 @@ const cors = require('cors')
 //app object
 const app = express()
 
-//port for localhost
-const PORT =  3004
-// process.env.DB_PORT ||
 
 const db = require('./db/DBconnection')
 
@@ -43,6 +40,7 @@ app.get('/', async (req, res) => {
     res.send("Heoo")
 })
 
+const PORT = process.env.DB_PORT || 3004
 
 //checking the server's work
 app.listen(PORT, () => {
