@@ -1,6 +1,6 @@
 //packages
 const express = require('express')
-const appConfig =  require('./db/AppConfig.js')
+// const appConfig =  require('./db/AppConfig.js')
 
 require('dotenv').config()
 
