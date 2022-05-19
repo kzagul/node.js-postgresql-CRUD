@@ -30,6 +30,9 @@ app.use('/api', sportObjectRouter)
 app.use('/api', sportInstitutionRouter)
 app.use('/api', userRouter)
 
+app.get('/', async (req, res) => {
+    res.send("Heoo")
+})
 
 
 // const PORT = appConfig.Port || 3004
