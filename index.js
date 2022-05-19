@@ -31,7 +31,7 @@ app.use('/api', sportInstitutionRouter)
 app.use('/api', userRouter)
 
 app.get('/', async (req, res) => {
-    res.send("Heoo")
+    res.send("Sport 72 server by KZagul with Node.js and Love")
 })
 
 
