@@ -31,7 +31,8 @@ app.use('/api', sportInstitutionRouter)
 app.use('/api', userRouter)
 
 app.get('/', async (req, res) => {
-    res.send("Sport 72 server by KZagul with Node.js and Love")
+    // res.send("Sport 72 server by KZagul with Node.js and Love")
+    res.json({ message: "SPORT node.js application by K.Zagul" });
 })
 
 
