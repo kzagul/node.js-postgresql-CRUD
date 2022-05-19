@@ -7,13 +7,13 @@ require('dotenv').config()
 //cors
 const cors = require('cors')
 
-// const { Pool } = require('pg');
-// const pool = new Pool({
-//   connectionString: process.env.DATABASE_URL,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
-// });
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 //app object
 const app = express()
@@ -58,7 +58,7 @@ app.get('/', async (req, res) => {
 
 
 // const PORT = appConfig.Port || 3004
-const port = process.env.DB_PORT || 3004
+const port = process.env.PORT || 3004
 // const PORT =  3030
 
 //checking the server's work
