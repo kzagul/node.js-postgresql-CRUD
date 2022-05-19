@@ -58,7 +58,7 @@ app.get('/', async (req, res) => {
 
 
 // const PORT = appConfig.Port || 3004
-const port = process.env.PORT || 3004
+const port = process.env.DB_PORT || 3004
 // const PORT =  3030
 
 //checking the server's work
