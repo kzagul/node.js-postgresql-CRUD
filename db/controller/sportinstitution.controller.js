@@ -14,6 +14,39 @@ class SportInstitutionController {
             next(error)
         }
     }
+
+
+    async getAllFull(req, res, next) {
+        try {
+            let sql = `SELECT
+                            sportinstitution.id,
+
+                            contacts.website,
+                            contacts.phonenumber,
+                            contacts.vk,
+                            contacts.inst
+
+                            
+                        FROM 
+                            sportinstitution 
+
+                        JOIN 
+                            contacts 
+                        ON 
+                            sportinstitution.fk_contacts_id = contacts.id;`
+            let result = await db.query(sql)
+            res.json(result.rows)
+        }
+        catch (error){
+            console.error(error)
+            next(error)
+        }
+    }
+
+
+
+
+
     //API GET sport institution by id
     async getSportInstitutionById(req, res, next){
         try{
